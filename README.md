@@ -25,3 +25,41 @@ Verifica las versiones instaladas con los siguientes comandos:
 ```bash
 java -version
 gradle -v
+
+📥 Clonar el repositorio
+
+Clona este proyecto en tu máquina local:
+
+git clone https://github.com/dimabe2019/Reto-SQA---Automatizacion-a-nivel-de-servicios.git
+
+📦 Descarga de dependencias
+
+Gradle gestionará automáticamente las dependencias definidas en build.gradle.
+Para descargarlas, ejecuta:
+
+gradle clean build
+
+Esto instalará todas las librerías necesarias para la ejecución de pruebas.
+
+📖 Estructura del proyecto
+
+📂 reqres-automation
+ ┣ 📂 src
+ ┃ ┣ 📂 test
+ ┃ ┃ ┣ 📂 java        # Clases de pruebas automatizadas
+ ┃ ┃ ┗ 📂 resources   # Archivos JSON, features, etc.
+ ┣ 📜 build.gradle    # Configuración de dependencias
+ ┣ 📜 settings.gradle # Configuración del proyecto
+ ┗ 📜 README.md       # Documentación del proyecto
+
+🚀 Funcionalidad
+
+La automatización valida el correcto funcionamiento de la API de Reqres con pruebas que aseguran:
+
+Que se puedan listar usuarios correctamente.
+Que un nuevo usuario pueda ser creado exitosamente.
+Que un usuario existente pueda ser modificado.
+Que un usuario pueda ser eliminado de forma exitosa.
+
+✍️ Autor: Diego Martinez
+🔹 Rol: QA Automation Engineer
