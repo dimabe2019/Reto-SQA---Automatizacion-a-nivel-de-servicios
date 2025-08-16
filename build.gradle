@@ -1,0 +1,30 @@
+plugins {
+    id("java")
+}
+
+group = "org.example"
+version = "1.0-SNAPSHOT"
+
+ext {
+    karateVersion = "1.0.1"
+    cucumberReportVersion = "5.5.3"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "com.intuit.karate:karate-junit5:${karateVersion}"
+    testImplementation "net.masterthought:cucumber-reporting:${cucumberReportVersion}"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.testType", System.properties.getProperty("testType")
+    systemProperty "baseUrl", System.properties.getProperty("baseUrl")
+
+    outputs.upToDateWhen {true}
+
+}
